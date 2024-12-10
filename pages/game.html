@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Scripts/game.js " defer></script>
+
+    <link rel="stylesheet" href="../style/styleGame.css">
+    <link rel="icon" href="../images/logo.png">
+
+    <title>בול פגיעה</title>
+</head>
+
+  
+
+  <audio id="clickSoundColors" preload="auto">
+    <source src= "../media/WeaponWhips.wav" type="audio/mpeg">
+</audio>
+<audio id="clickSoundCircls" preload="auto">
+    <source src= "../media/WeaponKnife.wav" type="audio/mpeg">
+</audio>
+<audio id="clikeToValidateRow" preload="auto">
+    <source src= "../media/CartoonFrying.wav" type="audio/mpeg">
+</audio>
+
+<audio id="win" preload="auto">
+    <source src= "../media/winmusic.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="lose" preload="auto">
+    <source src= "../media/dopamine-166628.mp3" type="audio/mpeg">
+</audio>
+
+<body >
+    <svg onclick="openNav()" class="openMenue" xmlns="../fonts/grip-lines-solid.svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M32 288c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 288zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32l384 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 160z"/></svg>
+    <div>
+    <div class="gameBoard">
+    
+        <div class="circales">
+
+            <div class=" rowM">
+                <div class=" circleMy">
+                    <div  class="circleM1 circ">?</div>
+                    <div class="circleM2 circ" > ?</div>
+                    <div class="circleM3 circ"> ?</div>
+                    <div class="circleM4 circ">? </div>
+                </div>
+         
+            </div>
+
+        <div class="row row1">
+            <div class="circle circle1">
+                <div  class="circleRow1 circ 1"></div>
+                <div class="circleRow1 circ 2"></div>
+                <div class="circleRow1 circ 3"></div>
+                <div class="circleRow1 circ 4"></div>
+            </div>
+            <div class="score score1">
+                <div class="scoreRow1 scor"></div>
+                <div class="scoreRow1 scor"></div>
+                <div class="scoreRow1 scor"></div>
+                <div class="scoreRow1 scor"></div>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="circle circle2 ">
+                <div  class="circleRow2 circ 1"></div>
+                <div class="circleRow2 circ 2"></div>
+                <div class="circleRow2 circ 3"></div>
+                <div class="circleRow2 circ 4"></div>
+            </div>
+            <div class="score score2">
+                <div class="scoreRow2 scor"></div>
+                <div class="scoreRow2 scor"></div>
+                <div class="scoreRow2 scor"></div>
+                <div class="scoreRow2 scor"></div>
+            </div>
+        </div>
+        <div class="row row3">
+            <div class="circle circle3">
+                <div  class="circleRow3 circ 1"></div>
+                <div class="circleRow3 circ 2"></div>
+                <div class="circleRow3 circ 3"></div>
+                <div class="circleRow3 circ 4"></div>
+            </div>
+            <div class="score score3">
+                <div class="scoreRow3 scor"></div>
+                <div class="scoreRow3 scor"></div>
+                <div class="scoreRow3 scor"></div>
+                <div class="scoreRow3 scor"></div>
+            </div>
+        </div>
+        <div class="row row4">
+            <div class="circle circle4">
+                <div  class="circleRow4 circ 1"></div>
+                <div class="circleRow4 circ 2"></div>
+                <div class="circleRow4  circ 3"></div>
+                <div class="circleRow4 circ 4"></div>
+            </div>
+            <div class="score score4">
+                <div class="scoreRow4 scor"></div>
+                <div class="scoreRow4 scor"> </div>
+                <div class="scoreRow4 scor"></div>
+                <div class="scoreRow4 scor"></div>
+            </div>
+        </div>
+        <div class="row row5">
+            <div class="circle circle5">
+                <div  class="circleRow5 circ 1"></div>
+                <div class="circleRow5 circ 2"></div>
+                <div class="circleRow5 circ 3"></div>
+                <div class="circleRow5 circ 4"></div>
+            </div>
+            <div class="score score5">
+                <div class="scoreRow5 scor"></div>
+                <div class="scoreRow5 scor"></div>
+                <div class="scoreRow5 scor"></div>
+                <div class="scoreRow5 scor"></div>
+            </div>
+        </div>
+        <div class="row row6">
+            <div class="circle circle6">
+                <div  class="circleRow6 circ 1"></div>
+                <div class="circleRow6 circ 2"></div>
+                <div class="circleRow6 circ 3"></div>
+                <div class="circleRow6 circ 4"></div>
+            </div>
+            <div class="score score6">
+                <div class="scoreRow6 scor"></div>
+                <div class="scoreRow6 scor"></div>
+                <div class="scoreRow6 scor"></div>
+                <div class="scoreRow6 scor"></div>
+            </div>
+        </div>
+        <div class="row row7">
+            <div class="circle circle7">
+                <div  class="circleRow7 circ 1"></div>
+                <div class="circleRow7 circ 2"></div>
+                <div class="circleRow7 circ 3"></div>
+                <div class="circleRow7 circ 4"></div>
+            </div>
+            <div class="score score7">
+                <div class="scoreRow7 scor"></div>
+                <div class="scoreRow7 scor"></div>
+                <div class="scoreRow7 scor"></div>
+                <div class="scoreRow7 scor"></div>
+            </div>
+        </div>
+        <div class="row row8">
+            <div class="circle circle8">
+                <div  class="circleRow8 circ 1"></div>
+                <div class="circleRow8 circ 2"></div>
+                <div class="circleRow8 circ 3"></div>
+                <div class="circleRow8 circ 4"></div>
+            </div>
+            <div class="score score8">
+                <div class="scoreRow8 scor"></div>
+                <div class="scoreRow8 scor"></div>
+                <div class="scoreRow8 scor"></div>
+                <div class="scoreRow8 scor"></div>
+            </div>
+        </div>
+
+
+    </div>
+    
+        <div class="rectangle">
+    
+            <div class="poolColors">
+            
+                <div class="aqua poolColor" id="aqua" style="background-color: aqua;"></div>
+                <div class="yellow poolColor" id="yellow" style="background-color: yellow;"></div>
+                <div class="orange poolColor" id="orange" style="background-color: orange;"></div>
+                <div class="purple poolColor" id="purple" style="background-color: purple;"></div>
+                <div class=" gray poolColor" id="gray" style="background-color: grey;"></div>
+                <div class="red poolColor" id="red" style="background-color: red;"></div>
+                <div class="blue poolColor" id="blue" style="background-color: blue;"></div>
+                <div class="green poolColor" id="green"  style="background-color: green;"></div>
+           
+            </div>
+    
+        </div>
+
+    </div>
+
+
+    
+
+    <button class="submit"> שלח שורה</button>
+
+
+</div>
+
+
+
+</body>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <h1 class="endGame"></h1>
+        <button   class="button1">מעבר לדף המשחקים</button>
+        <button  class="button2">התחלת משחק חדש</button>
+
+    </div>
+  
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <img class="sound" src="" alt="" width="50px" height="50px">
+
+    <h3 class="titleLevel"></h5>
+    <p class="inst"></p>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <button class="reveal">  גלה צבעים</button>
+    <button class="backToGames" style="display: none;">מעבר לדף משחקים</button>
+    <button  class="newGame" style="display: none;">משחק חדש</button>
+
+
+    <div class="divInputs">
+        <h5>החלפת רמה:</h5> 
+        <div class="divInput">
+            <input 
+            type="radio"
+             name="level"
+              value="1">
+              <label>קל</label>
+            </div>
+            <div class="divInput">
+                <input 
+                type="radio" 
+                name="level" value="2">
+                <label>בינוני</label>
+            </div>
+            <div class="divInput">
+                <input type="radio" 
+                name="level" 
+                value="3">
+                <label>קשה</label>
+            </div>
+        </div>
+   
+  </div>
+  
+
+</html>

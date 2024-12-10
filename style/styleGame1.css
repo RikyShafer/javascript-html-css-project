@@ -1,0 +1,416 @@
+body {
+    background-image: url("../images/back2.png");
+    background-size: cover; /* This scales the image to cover the entire element */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+
+.circ{
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 0.3vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 1.2vw;
+    height: 1.2vw;
+    min-width: 23px;
+    min-height: 23px;
+    box-shadow: 
+    5 5 10px rgba(5, 5, 5, 0.6), /* Inner shadow */
+    inset 5 5 10px rgba(255, 255, 255, 0.5); /* Highlight at the top */
+    display: inline-block;
+    margin:  4px;
+    background: radial-gradient(circle at 2px 50px, #ffffff, #000000);
+    z-index: 102;
+
+}
+
+.circleM1, .circleM2, .circleM3, .circleM4{
+  /*center the content*/
+  text-align: center;
+}
+
+/* .circleMy {
+  display: flex;
+  justify-content: center; 
+ 
+  width: 4.0vw;
+  height: 4.0vw;
+  border-radius: 30px;
+  gap: 0.6vw;
+  margin-left: 80px;
+  
+
+} */
+
+.scor{
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 0.5vw;
+    height: 0.5vw;
+    min-width: 6px;
+    min-height: 6px;
+    display: inline-block;
+    margin: 0.1vw;
+    margin-top: 5px;
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.gameBoard {
+    background-color: #989898;
+    border-radius: 5px;
+    color: white;
+    margin: 36px;
+    /* padding: 0.5em 2em; */
+    position: relative;
+    width: 500px;
+    height: 600px;
+    max-width: 80vw;
+    max-height: 80vh;
+    justify-content: space-between;
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 7fr 1fr;
+
+    grid-auto-rows: 300px;
+    gap: 30px;
+  }
+  
+  .gameBoard:before {
+    content: "";
+    display: block;
+    background-color: #989898;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    bottom: -25px;
+    right: -25px;
+    z-index: -1;
+    border-radius: 60px;
+    box-shadow: 0px -6px 12px 0 #373737 inset,
+                0px 3px 3px 3px rgba(194, 194, 194, 0.5) ;
+  } 
+
+
+  /*לשנות את צבע בחירת הטקסט לשקוף*/
+  .gameBoard ::-moz-selection { /* Code for Firefox */
+    background: rgba(255, 255, 255,0);
+  }
+  
+  .gameBoard ::selection {
+    background: rgba(255, 255, 255,0);
+  }
+
+
+
+
+
+
+  
+  .ball {
+    background: black;
+    border-radius: 100%;
+    width: 1.75vw;
+    height: 1.75vw;
+    min-width: 25px;
+    min-height: 25px;
+    margin:  4px;
+    display: inline-block;
+  }
+
+  .ballDec{ 
+    width: 40px;
+    height: 40px;
+    position: absolute;  
+  }
+  
+.poolColor{
+  
+    border-style: solid;
+    border-color: black;
+    border-width: 6px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    box-shadow: 
+    5 5 10px rgba(5, 5, 5, 0.6), /* Inner shadow */
+    inset 5 5 10px rgba(255, 255, 255, 0.5); /* Highlight at the top */
+}
+
+  /* הדף של המחשק הוספותש לי  */
+
+  .rectangle {
+    /* width: 100px; Set the width as per your requirement */
+    height: 540px + 5vh; /* Set the height as per your requirement */
+  width: 100px;
+    background-color: #d0b5b5a4; /* Set the background color */
+    border-radius: 13px; /* Add rounded corners */
+    /* box-shadow: -5px -5px -10px rgba(139, 57, 57, 0.542),  */
+    /* inset 5px 5px 10px rgba(255, 255, 255, 0.3);  */
+    background: -webkit-radial-gradient(top,#817c7ca4,rgb(114, 112, 112));
+    background: radial-gradient(top,#817c7ca4,rgb(114, 112, 112));
+    margin: 0px; /* Adjust the margin as needed for spacing */
+  
+  
+    -webkit-box-shadow: inset 0 5px 5px #fbfbfb, 0 5px 0 0 #fbfbfb;
+    box-shadow: inset 0 5px 5px #fbfbfb, 0 0px 0px #fbfbfb;
+  }
+
+  
+  
+  
+  .poolColors
+  {
+  
+    padding-top: 4.3vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    display:  grid;
+    grid-template-columns: 2fr  ;
+    gap: 25px;
+   
+  }
+
+
+  .rowM{
+    width: 80%;
+    /* width: 100px; Set the width as per your requirement */
+    height: 50px; /* Set the height as per your requirement */
+    background-color: #d0b5b5a4; /* Set the background color */
+    border-radius: 13px; /* Add rounded corners */
+    /* box-shadow: -5px -5px -10px rgba(139, 57, 57, 0.542),  */
+    /* inset 5px 5px 10px rgba(255, 255, 255, 0.3);  */
+    background: -webkit-radial-gradient(top,#817c7ca4,rgb(114, 112, 112));
+    background: radial-gradient(top,#817c7ca4,rgb(114, 112, 112));
+    margin: 0px; /* Adjust the margin as needed for spacing */
+      
+    padding-top: 5%;
+    padding-left: 10%;
+    -webkit-box-shadow: inset 0 5px 5px #fbfbfb, 0 5px 0 0 #fbfbfb;
+    box-shadow: inset 0 5px 5px #fbfbfb, 0 0px 0px #fbfbfb;
+    margin-bottom: 20%;
+  }
+  
+
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+     position: fixed; /*Stay in place */
+    z-index: 105; /* Sit on top */
+    left: 0;
+    top: 0;
+    margin: 0px;
+    
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: rgba(255, 255, 255, 0.505); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    margin-left: 20vw;
+    margin-top: 40vh;
+    /* margin: 15% auto; 15% from the top and centered */
+
+    /* border: 1px solid #888; */
+    width: 60vw; /* Could be more or less, depending on screen size */
+    height: 60vh;
+    text-align: center;
+  }
+
+  button {
+	position: relative;
+	margin: .5em;
+	border: solid .125em transparent;
+	padding: 0;
+	width: 9em;
+     height: 3.5em;
+    border-radius: 1.5em; /* Rounded corners */	color: #fff;
+    box-shadow: inset 0 0 .125em rgba(#fff, .75);
+	background: 
+	linear-gradient(#f8e7e8, #e30001, #bc0000) content-box, 
+	linear-gradient(-80deg, #f11f20, #9c1c1c, #f11f20) 0/ 37% 100% border-box;
+  }
+
+button:active{
+    transform: translateY(0.125em);
+}
+button:after{
+    position: absolute;
+    top: calc(100% + 0.25em);
+    right: -1em; left: -em;
+    height: 4em;
+    background: radial-gradient(rgba(#000, .25), transparent 50%);
+    transition: inherit;
+    content: ''
+}
+button:active:after { transform: translateY(-0.125em) scale(1.125, 1.25) }
+
+h1{
+    font-size: 6em;
+    color: #ffffff;
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-size: 5vw;
+}
+
+.openMenue{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  fill: #e30001;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.505); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sound,
+.notsound {
+  cursor: pointer;
+  /* Set the cursor to an arrow */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+label,h5,p,h1,h3 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+p{
+  margin: 10px;
+}
+
+
+
+#mySidenav{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+}
+
+.reveal{
+  margin: 20px;
+}
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+label,h5,p,h1,h3 {
+  color: #ffffff;
+  direction: rtl;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+p{
+  margin: 10px;
+}
+
+.divInputs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+#mySidenav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reveal{
+  margin: 20px;
+}
+
+
+
+@media screen and (max-width: 380px) {
+  .circ{
+    width: 0.8vw;
+    height: 0.8vw;
+    min-height: 5px;
+    min-width: 5px;
+    margin: 2px;
+    
+  }
+}

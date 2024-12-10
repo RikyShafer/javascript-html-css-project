@@ -1,0 +1,598 @@
+/*הכל*/
+.center-element {
+  /*סידור אובייקט באמצע הדף*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.had {
+  /*כותרות*/
+  color: #ffffff;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  text-shadow: 0 0 10px #d2d2d2;
+  direction: rtl;
+
+}
+
+.signInRE{
+  height: 20px;
+  width: 100px;
+}
+
+.mes{
+  color: #ff0000;
+  margin-top: -1%;
+}
+
+.imgLogo {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 220px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/*כפתורים*/
+
+.glow-on-hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  max-width: 90%;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+
+
+.glow-on-hover:hover:after {
+  background: transparent;
+}
+
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+
+
+
+.button {
+  margin: 10px;
+
+}
+
+/*טפסים*/
+/*דפי כניסה והרשמה אותו עיצוב*/
+
+.illuminatedInput {
+  background: #222;
+  background: linear-gradient(#333, #222);
+  border: 1px solid #444;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 2px 0 #000;
+  color: #888;
+  display: block;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  text-align: right;
+  direction: rtl;
+  margin: 0;
+  padding: 0 10px;
+  text-shadow: 0 -1px 0 #000;
+  width: 200px;
+  max-width: 80%;
+  margin: 10px;
+}
+
+
+.illuminatedInput:focus {
+  animation: glow 3200ms ease-out infinite alternate;
+  color: #efe;
+  outline: none;
+}
+
+
+
+@keyframes glow {
+  0% {
+    border-color: #ff0000;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.2), inset 0 0 10px rgba(255, 0, 0, 0.1), 0 2px 0 #000;
+  }
+
+  25% {
+    border-color: #fffb00;
+    box-shadow: 0 0 20px rgba(204, 255, 85, 0.6), inset 0 0 10px rgba(217, 255, 0, 0.4), 0 2px 0 #000;
+  }
+
+  50% {
+    border-color: #00ffd5;
+    box-shadow: 0 0 20px rgba(0, 225, 255, 0.2), inset 0 0 10px rgba(0, 204, 255, 0.1), 0 2px 0 #000;
+  }
+
+  75% {
+    border-color: #002bff;
+    box-shadow: 0 0 30px rgba(140, 0, 255, 0.6), inset 0 0 10px rgba(156, 74, 255, 0.4), 0 2px 0 #8818ff;
+  }
+
+  100% {
+    border-color: #ff00c8;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6), inset 0 0 10px rgba(255, 0, 0, 0.1), 0 2px 0 #000;
+  }
+}
+
+/* #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000 */
+
+form {
+  /*הטופס שמסודר יפה באמצע הדף*/
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.0);
+  /* Adjust the alpha (fourth) value for transparency */
+  border-radius: 10px;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+  /* Optional: Add a subtle shadow */
+}
+
+/*דף ראשי*/
+.imageOpen {
+  /*תמונת פתיחה*/
+  width: 100vw;
+  height: 110vh;
+  background-image: url("../images/indexPage.png");
+  background-size: cover;
+  /* This scales the image to cover the entire element */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.jump {
+  /*דיב של הטקסט והחץ ביחד*/
+  position: absolute;
+  top: 80vh;
+  right: 45vw;
+  text-align: center;
+  animation: swinging 2s ease-in-out infinite;
+}
+
+.jump p {
+  /*הטקסט*/
+  color: rgb(255, 0, 119);
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-weight: bold;
+}
+
+.jump p svg {
+  /*החץ הקטן*/
+  fill: rgb(255, 0, 119);
+  animation: swinging 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+
+.text {
+  margin-bottom: 20px;
+}
+
+.regOrSign {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+
+}
+
+.regOrSign h1 {
+  text-align: center;
+}
+
+
+@keyframes swinging {
+  /*אנימציית נדנוד לחץ שבפתיחה*/
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  40%,
+  55%,
+  65% {
+    transform: rotate(6deg);
+  }
+
+  50%,
+  60% {
+    transform: rotate(-6deg);
+  }
+}
+
+
+.bodyIndex {
+  /*דף ראשי*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+}
+
+
+
+
+/*דף משחקים*/
+
+
+.bodyGames {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.games {
+  /*דיב שמכיל את כל הכרטיסים*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 4rem;
+  column-gap: 4rem;
+  margin: 2vw;
+
+}
+
+/*הכותרת שיכנס אליה פנייה אישית עם שם המשתמש*/
+.toname {
+  color: white;
+}
+
+
+.rmhv h1 {
+  font-size: 3vw;
+}
+
+.rmhv {
+  /*כותרות של הדף*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: clamp(2px, 4vw, 25px);
+  font-family: 'Noto Sans Hebrew', sans-serif;
+  color: transparent;
+  direction: rtl;
+  color: #eee;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+  /* שיהיה מעל הכל */
+}
+
+@keyframes glow2 {
+
+  /*האפקט של הצל שמחליף צבעים בדף משחקים*/
+  0% {
+    border-color: #ff0000;
+    box-shadow: 10px 10px 30px 2px rgba(255, 0, 0, 0.6);
+
+  }
+
+  6.25% {
+    border-color: #ff0000;
+    box-shadow: 2px 2px 30px 2px rgba(255, 0, 0, 0.6);
+  }
+
+  12.5% {
+    border-color: #ff7300;
+    box-shadow: 2px 2px 30px 2px rgba(255, 115, 0, 0.6);
+
+  }
+
+  18.75% {
+    border-color: #ff7300;
+    box-shadow: 10px 10px 30px 2px rgba(255, 115, 0, 0.6);
+
+  }
+
+  25% {
+    border-color: #fffb00;
+    box-shadow: 10px 10px 30px 2px rgba(255, 251, 0, 0.6);
+
+
+  }
+
+  31.25% {
+    border-color: #fffb00;
+    box-shadow: 2px 2px 30px 2px rgba(255, 251, 0, 0.6);
+
+  }
+
+  37.5% {
+    border-color: #48ff00;
+    box-shadow: 2px 2px 30px 2px rgba(72, 255, 0, 0.6);
+
+  }
+
+  43.25% {
+    border-color: #48ff00;
+    box-shadow: 10px 10px 30px 2px rgba(72, 255, 0, 0.6);
+
+  }
+
+  50% {
+    border-color: #00ffd5;
+    box-shadow: 10px 10px 30px 2px rgba(0, 225, 213, 0.6);
+
+  }
+
+  56.25% {
+    border-color: #00ffd5;
+    box-shadow: 2px 2px 30px 2px rgba(0, 225, 213, 0.6);
+
+  }
+
+  62.5% {
+    border-color: #002bff;
+    box-shadow: 2px 2px 30px 2px rgba(0, 43, 255, 0.6);
+
+  }
+
+  67.75% {
+    border-color: #002bff;
+    box-shadow: 10px 10px 30px 2px rgba(0, 43, 255, 0.6);
+
+  }
+
+  75% {
+    border-color: #7a00ff;
+    box-shadow: 10px 10px 30px 2px rgba(122, 0, 225, 0.6);
+
+  }
+
+  81.25% {
+    border-color: #7a00ff;
+    box-shadow: 2px 2px 30px 2px rgba(122, 0, 225, 0.6);
+
+  }
+
+  87.5% {
+    border-color: #ff00c8;
+    box-shadow: 2px 2px 30px 2px rgba(255, 0, 200, 0.6);
+
+  }
+
+  93.75% {
+    border-color: #ff00c8;
+    box-shadow: 10px 10px 30px 2px rgba(255, 0, 200, 0.6);
+
+  }
+
+  100% {
+    border-color: #ff0000;
+    box-shadow: 10px 10px 30px 2px rgba(255, 0, 0, 0.6);
+  }
+}
+
+
+/*כרטיסים מתהפכים*/
+.flip-box {
+  background-color: transparent;
+  width: 17vw;
+  height: 20vw;
+  box-shadow: 50% 50% 0 0 white;
+  perspective: 1000px;
+
+  border-radius: 10px;
+}
+
+/* דיב שמכיל את שתי הצדדים */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
+}
+
+/* אפקט ההיפוך */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+
+}
+
+.flip-box-front img {
+  margin: 5%;
+  max-width: 90%;
+  border: 1px solid transparent;
+  /* מסגרת שקופה */
+  outline: 1px solid transparent;
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+}
+
+.flip-box-front h3 {
+  color: white;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+}
+
+
+/* מיקום של הצד הקדמי והאחורי */
+.flip-box-front,
+.flip-box-back {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: glow2 6000ms ease-out infinite alternate;
+  /*הפעלת האניצייה של הצל*/
+  border-radius: 30px;
+  border-top: 0px;
+  border-left: 0px;
+  font-size: 1.7vw;
+}
+
+.flip-box-back.boolPgiahBack
+{
+  font-size: 1.0vw;
+}
+/* עיצוב צד אחורי */
+.flip-box-back {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+
+
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-back {
+  transform: rotateX(180deg);
+}
+
+.InactivePage {
+  /*כרטיסייה של משחק לא פעיל*/
+  margin-top: 5vw;
+  font-size: clamp(2px, 4vw, 50px);
+  color: transparent;
+  font-family: "Material Symbols Outlined";
+  text-shadow: 1px 1px 0 red, -1px -1px 0 green, 3px 0 0 violet, -3px 0 0 yellow,
+    0 -3px 0 aqua, 0 3px 0 yellowgreen;
+  color: #eee;
+}
+
+/*הכרטיס של הבול פגיעה*/
+.buttonG {
+  /* כפתור שבתוך הכרטיס של הבול פגיעה*/
+  font-size: clamp(2px, 4vw, 50px);
+  color: white;
+  font-family: "Material Symbols Outlined";
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 60px;
+}
+
+.boolPgiahBack h1,
+p,
+h3,
+h5,
+label {
+  
+  color: #ffffff;
+  direction: rtl;
+}
+
+input[disabled] {
+  /*קו מוחק מעל אפשרות שלא ניתנת לבחירה*/
+  text-decoration: line-through;
+}
+
+.divInputs {
+  /*דיב שלתוכו נכנסים הבחירות של השלבים*/
+  display: flex;
+  flex-direction: column;
+}
+
+.divInputs label {
+  /*כותרת של השלבים*/
+  font-size: 1.1vw;
+}
+
+.divInputs radio{
+  /*כפתורים של השלבים*/
+  /*הגדר גודל*/
+  width: 30px;
+  height: 30px;
+}
+
+.sound,
+/*כפתור הפעלת/השתקת שמע*/
+.notsound {
+  cursor: pointer;
+  width: 17%;
+
+  height: 17%;
+  /* שכשעומדים על זה זה לא יראה סימן של בחירת טקסט אלא אצבע כזאת */
+}
