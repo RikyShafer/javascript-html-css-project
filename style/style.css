@@ -596,3 +596,21 @@ input[disabled] {
   height: 17%;
   /* שכשעומדים על זה זה לא יראה סימן של בחירת טקסט אלא אצבע כזאת */
 }
+
+
+.auth-link {
+  color: #00ffd5; /* Change to your desired color */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #48ff00; /* Change to your desired hover color */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.auth-link:visited {
+  color: #002bff; /* Change to your desired visited color */
+}
