@@ -5,12 +5,12 @@ const reg = document.getElementById("reg"); // הדיב של ההרשמה
 
 registerEl.addEventListener("click", (event) => { //אירוע של לחיצה על הכפתור ההרשמה
     event.preventDefault();
-        window.location.href = "./Pages/Register.html"; // מעביר אותו לדף ההרשמה
+        window.location.href = "./Register.html"; // מעביר אותו לדף ההרשמה
 });
 
 signInEl.addEventListener("click", (event) => { //אירוע של לחיצה על הכפתור ההתחברות
     event.preventDefault();
-    window.location.href = "./Pages/SignIn.html"; // מעביר אותו לדף ההתחברות
+    window.location.href = "./SignIn.html"; // מעביר אותו לדף ההתחברות
 });
 
 

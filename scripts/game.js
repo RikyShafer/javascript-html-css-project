@@ -27,9 +27,9 @@ let circles; // משתנה של כל העיגולים בשורה הנוכחית
 
 
 if (currentUser.games[0].playSound) { //מכניס את הסמל המתאים לכפתור השמע/השתקת המוזיקה בכרטיס
-    sound.src = "../images/sound.png";
+    sound.src = "./images/sound.png";
 } else {
-    sound.src = "../images/notSound.png";
+    sound.src = "./images/notSound.png";
 }
 
 const chooseRandomColors = () => { // פונקצייה לבחירת צבעים רנדומליים
@@ -371,7 +371,7 @@ const showWin = () => {
     const endGame = document.querySelector(".endGame");
     endGame.textContent = "ניצחת! "
     const confettiImage = document.createElement("img"); // יוצר אלמנט של תמונה
-    confettiImage.src = "../gifs/e4d2c1d0da356797359acd9270bcdd77 (1).gif"; // מגדיר את המקור של התמונה
+    confettiImage.src = "./gifs/e4d2c1d0da356797359acd9270bcdd77 (1).gif"; // מגדיר את המקור של התמונה
     confettiImage.style.width = "100%"; // מגדיר את הרוחב של התמונה
     confettiImage.style.height = "200%"; // מגדיר את הגובה של התמונה
     confettiImage.style.zIndex = "100"; // מגדיר את המיקום של התמונה
@@ -433,12 +433,12 @@ const but2 = document.querySelector(".button2") // כפתור של התחלת מ
 
 const toGames = (event) => { // חזרה לדף משחקים
     event.preventDefault();
-    window.location.href = "../Pages/games.html";
+    window.location.href = "./games.html";
 }
 
 const newGame = (event) => { // התחלת משחק חדש
     event.preventDefault();
-    window.location.href = "../Pages/game.html";
+    window.location.href = "./game.html";
 }
 
 but1.addEventListener("click", toGames); //הוסף אירוע לכפתור של חזרה לדף משחקים
@@ -493,9 +493,9 @@ sound.addEventListener("click", () => { // הוסף אירוע לכפתור של
     currentUser.games[0].playSound = !currentUser.games[0].playSound; // toggle  - הפעל או עצור את הצלילים
 
     if (currentUser.games[0].playSound) { //מכניס את הסמל המתאים לכפתור השמע/השתקת המוזיקה בכרטיס
-        sound.src = "../images/sound.png";
+        sound.src = "./images/sound.png";
     } else {
-        sound.src = "../images/notSound.png";
+        sound.src = "./images/notSound.png";
     }
 
     // עדכן את הבחירה של הפעלת מוזיקה במשתמש הנוכחי בלוקל סטורג' ובסשן סטורג'

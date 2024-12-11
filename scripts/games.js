@@ -11,19 +11,19 @@ const mes = "שלום,  " + currentUser.userName; // הטקסט של הכותר�
 toname.textContent = mes; // הכנסת הטקסט לתוך הכותרת
 
 if (currentUser.games[0].playSound) { //מכניס את הסמל המתאים לכפתור השמע/השתקת המוזיקה בכרטיס
-   sound.src = "../images/sound.png";
+   sound.src = "./images/sound.png";
 }else{
-   sound.src = "../images/notSound.png";
+   sound.src = "./images/notSound.png";
 }
 
 sound.addEventListener("click", () => { // פונקציה שמטפלת בלחיצה על כפתור השמע/השתקת המוזיקה בכרטיס
    currentUser.games[0].playSound = !currentUser.games[0].playSound; // Toggle - הפוך את הבחירה של המשתמש מוזיקה מופעלת/מוזיקה כבויה
 
    if (currentUser.games[0].playSound) { //מכניס את הסמל המתאים לכפתור השמע/השתקת המוזיקה בכרטיס
-      sound.src = "../images/sound.png";
+      sound.src = "./images/sound.png";
    }
    else {
-      sound.src = "../images/notSound.png";
+      sound.src = "./images/notSound.png";
    }
 
    usersList = usersList.map((el) => { // מעדכן את הרשימה של המשתמשים
@@ -92,7 +92,7 @@ function addInputToBackBoolPgiah() { // פונקציה שמוסיפה לכרטי
 
 buttonG.addEventListener("click", (event) => { // פונקציה שמטפלת בלחיצה על כפתור המעבר למשחק
    event.preventDefault();
-   window.location.href = "../Pages/game.html";
+   window.location.href = "./game.html";
 });
 
 
@@ -105,5 +105,5 @@ const imgLogo=document.querySelector(".imgLogo");
 
 buttonG.addEventListener("click", (event) => { // פונקציה שמטפלת בלחיצה על כפתור המעבר למשחק
    event.preventDefault();
-   window.location.href = "../Pages/game.html";
+   window.location.href = "./game.html";
 });
